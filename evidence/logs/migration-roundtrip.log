@@ -1,0 +1,10 @@
+# migration round-trip evidence (re-run on scratch PG, 2026-11-23)
+### upgrade_head: alembic upgrade head
+### EXIT_CODE upgrade_head=0
+### downgrade_0001: alembic downgrade 0001
+### EXIT_CODE downgrade_0001=0
+### upgrade_head_again: alembic upgrade head
+### EXIT_CODE upgrade_head_again=0
+### current: alembic current
+0002 (head)
+### EXIT_CODE current=0
