@@ -1,0 +1,14 @@
+{
+  "env": "test",
+  "previous_tag": "v1",
+  "current_tag": "v2",
+  "alembic_revision": "0001",
+  "migration_reversible": true,
+  "triggered_by": "ci",
+  "started_at": "2026-11-23T12:16:28Z",
+  "finished_at": "2026-11-23T12:18:36Z",
+  "status": "success",
+  "duration_seconds": 121,
+  "last_rollback_from": "",
+  "note": "Example state written by deploy.sh; rollback.sh defaults its target to previous_tag."
+}

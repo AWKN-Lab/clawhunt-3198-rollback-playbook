@@ -44,6 +44,24 @@ State after the run: `current_tag=v1`, `last_rollback_from=v2-bad`, `status=roll
 Artifacts: `evidence/logs/deploy-3198-baddrill.log`,
 `evidence/logs/deploy-3198-baddrill.rollback.log`.
 
+## previous_tag provenance
+
+`previous_tag` is not a label invented for the narrative; it is a persisted field that drives the
+rollback target. Its lifecycle:
+
+| Question | Answer |
+|---|---|
+| Where is it defined? | `ops/deploy/state/{env}.json`, field `previous_tag` (contract: `ops/deploy/state/README.md`) |
+| Who writes it? | `deploy.sh`, at deployment start: it reads the state's current `current_tag` and stores it as the new `previous_tag` (default `none` if absent) |
+| Who consumes it? | `rollback.sh`: target = `--target-tag` if given, otherwise `state.previous_tag` |
+| How to verify it? | `python3 ops/deploy/lib/state.py ops/deploy/state/test.json get previous_tag` |
+| Measured value in this drill | `previous_tag` = **`v1`** (state before the fault deploy: `current_tag=v1`) |
+| Cross-check in the log | `ROLLBACK_PLAN env=test from=v2-bad to=v1 ...` |
+
+Committed example instance: `ops/deploy/state/example.test.json` (`"previous_tag": "v1"`).
+The live state file is intentionally excluded from the repository (`.gitignore`) because it is runtime
+state; the example captures the exact shape and a real value.
+
 ## AC 2 — no downgrade without --with-db-downgrade
 
 ```bash
@@ -119,4 +137,6 @@ Migration evidence excerpt:
 - `bash scripts/secret-scan.sh` → `scan_result=PASS` (private keys, GitHub/cloud tokens, password
   values, private IPs, local absolute paths, e-mails, bid/agent identifiers, hostname leaks, `.env`
   files: all zero findings).
-- `sha256sum -c MANIFEST.sha256` executed on a fresh clone of this repository → 0 failures.
+- `.gitattributes` pins `* -text`, so no platform rewrites line endings.
+- `sha256sum -c MANIFEST.sha256` on a fresh Linux clone → 0 failures;
+  the same manifest verified file-by-file with SHA-256 on a fresh Windows clone → 0 failures.

@@ -1,5 +1,5 @@
-50113a6baad0116c3ef19cf3ac23f643d227cf7c81bab38f4fc842c66fcaa93e  ./ACCEPTANCE-EVIDENCE.md
-2b4a4fc10ce72ae0c95cc987dd09406348bba2ec3952f029760c50008b23c007  ./ACCEPTANCE.md
+76fee1eb8152bee5dfb861c7ed734a67ac379f8c2fdd27eb346d465ab010a538  ./ACCEPTANCE-EVIDENCE.md
+15f184d6b52a72e408d60cc538971f9da2a2a51fc68612beac6b956e4e9abbf6  ./ACCEPTANCE.md
 9335fcb78d4d252a9bbcaedb03ba30b13b2b9b0709e34c89abf2f70b6a46d064  ./docs/ac-3198.md
 ace3e1c0ac2c91b2fb87489e474b68fe789b097bac4c9d7753ab0a2a7e983350  ./docs/MIGRATION-COMPAT.md
 47542d73ba26c178b0cf1b25f89239f88b66622f00425d8c9b611a212637af38  ./evidence/logs/deploy-3198-baddrill.log
@@ -9,6 +9,7 @@ b0d1f01918d0492fffd0ae98c19ac0f099f597669b7204ae3509ed67ecca6e77  ./evidence/log
 af5f4b7fb4774b1ea0190c6ed79f808fe7db664072794c4a24af688f3b7ea07e  ./evidence/logs/drill-3198-step3-rollback-v1.log
 a068f05a58dea3ce0c373a866c7bb3a478ec0d0f942f0f9d44efd7e3eb276e2f  ./evidence/logs/migration-roundtrip.log
 761d3e1592c0d24d4f5b438bbafdbed063e73a2f136c39c939de9a4d0bb5b367  ./evidence/logs/recover-baddrill.log
+d1e33b2fe3936adedc9f9f8d4fca7cd4cb717e7196a1bde6bb3e39cfb684d8f4  ./.gitattributes
 c2247ad4b63498ad6027ef52a8fa877957a041c5985475f420c2ce599f41545e  ./.github/workflows/deploy.yml
 0f7d7565f2f34f3d8736bfb9f443594453f9f0a8cbf0ee72a39c5a7bb1eaf64e  ./.gitignore
 0a87e3459c5cdc4fb54860bf755db920a1e7b6cbfc4b73f03bd6fc3c3f76dc9b  ./ops/app/alembic/env.py
@@ -32,6 +33,7 @@ d412b0a261d86104bef9e721a8b8295a850fb6d5a046d1889e154b570743050a  ./ops/deploy/l
 b6e361f88a7a44aec140612d8f1bd373b164bb8fa406af856446680ed7567858  ./ops/deploy/loadtest.py
 9a1c8b7726b165b64708685f3ff9e4d09e122f7e59fd3af54aad8004a9c54b4a  ./ops/deploy/rollback.sh
 e285a3d191788c50e9470c0aa29538b0a46d5051b8fcb52f68dc078ef27f0ce4  ./ops/deploy/smoke/test.json
+2c6c36d6036807e3cb06115c09eb0329fddf304bb96fde62553948feaa3bfd1c  ./ops/deploy/state/example.test.json
 69efb955bbab6f0f365b6210fcde34009268e3e11a0ee056e81a049ae4a5bc82  ./ops/deploy/state/README.md
 7389011e3bab53d4622d4a0a20f4b6e371dcb351da935c786151b9918c9b0cfd  ./README.md
 f96cc94eba893870f27edb236dd91c1dbc8004cf2ac78fe0365b237f018d2a17  ./scripts/secret-scan.sh
